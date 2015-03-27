@@ -1,0 +1,17 @@
+<!doctype html>
+
+<html>
+  <body ng-app="anguInterceptorDemo">
+    <div ng-controller="MainCtrl as vm">
+      <input type="button" ng-click="vm.call(400)" value="Bad Request">
+      <input type="button" ng-click="vm.call(401)" value="Unauthorized">
+      <input type="button" ng-click="vm.call(402)" value="Payment Required">
+      <input type="button" ng-click="vm.call(403)" value="Forbidden">
+      <input type="button" ng-click="vm.call(404)" value="Not Found">
+      <input type="button" ng-click="vm.call(405)" value="Method Not Allowed">
+    </div>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="angu-http-interceptor.js"></script>
+  </body>
+</html>

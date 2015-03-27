@@ -1,0 +1,11 @@
+{
+  "name": "angu-interceptor",
+  "main": "server/app.js",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "private": true
+}
