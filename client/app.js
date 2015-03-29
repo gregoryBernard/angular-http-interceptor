@@ -38,13 +38,22 @@ function api($http) {
   }
 }
 
-function myConf($httpProvider, anguHttpInterceptorProvider) {
+function myConf(anguHttpInterceptorProvider) {
+  //Handling 4xx resquests codes
   anguHttpInterceptorProvider.badRequest = alertInterceptor(400);
   anguHttpInterceptorProvider.unauthorized = alertInterceptor(401);
   anguHttpInterceptorProvider.paymentRequired = alertInterceptor(402);
   anguHttpInterceptorProvider.forbidden = alertInterceptor(403);
   anguHttpInterceptorProvider.notFound = alertInterceptor(404);
   anguHttpInterceptorProvider.methodNotAllowed = alertInterceptor(405);
+
+  //Handling 5xx resquests codes
+  anguHttpInterceptorProvider.internalServerError = alertInterceptor(500);
+  anguHttpInterceptorProvider.notImplemented = alertInterceptor(501);
+  anguHttpInterceptorProvider.badGatewayProxyError = alertInterceptor(502);
+  anguHttpInterceptorProvider.serviceUnavailable = alertInterceptor(503);
+  anguHttpInterceptorProvider.gatewayTimeout = alertInterceptor(504);
+  anguHttpInterceptorProvider.httpVersionNotSupported = alertInterceptor(505);
 
   function alertInterceptor(code) {
     return function() {

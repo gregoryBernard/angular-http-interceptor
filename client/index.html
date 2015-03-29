@@ -3,12 +3,22 @@
 <html>
   <body ng-app="anguInterceptorDemo">
     <div ng-controller="MainCtrl as vm">
-      <input type="button" ng-click="vm.call(400)" value="Bad Request">
-      <input type="button" ng-click="vm.call(401)" value="Unauthorized">
-      <input type="button" ng-click="vm.call(402)" value="Payment Required">
-      <input type="button" ng-click="vm.call(403)" value="Forbidden">
-      <input type="button" ng-click="vm.call(404)" value="Not Found">
-      <input type="button" ng-click="vm.call(405)" value="Method Not Allowed">
+      <div>
+        <input type="button" ng-click="vm.call(400)" value="Bad Request">
+        <input type="button" ng-click="vm.call(401)" value="Unauthorized">
+        <input type="button" ng-click="vm.call(402)" value="Payment Required">
+        <input type="button" ng-click="vm.call(403)" value="Forbidden">
+        <input type="button" ng-click="vm.call(404)" value="Not Found">
+        <input type="button" ng-click="vm.call(405)" value="Method Not Allowed">
+      </div>
+      <div>
+        <input type="button" ng-click="vm.call(500)" value="Unternal Server Error">
+        <input type="button" ng-click="vm.call(501)" value="Not Implemented">
+        <input type="button" ng-click="vm.call(502)" value="Bad Gateway Proxy Error">
+        <input type="button" ng-click="vm.call(503)" value="Service Unavailable">
+        <input type="button" ng-click="vm.call(504)" value="Gateway Timeout">
+        <input type="button" ng-click="vm.call(505)" value="Http Version Not Supported">
+      </div>
     </div>
     <script src="bower_components/angular/angular.js"></script>
     <script src="app.js"></script>
