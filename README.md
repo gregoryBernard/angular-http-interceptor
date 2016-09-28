@@ -2,6 +2,17 @@
 
 Simple example showing how to intercept http requests with angularJS
 
+## install with bower
+
+```sh
+bower install agu-http-error-intercept --save
+```
+
+. add to your index file
+```html
+<script src="bower_components/agu-http-error-intercept/dist/angu-http-interceptor.js"></script>
+```
+
 ## Interceptor itself
 
 Here's our [interceptor](https://github.com/gregoryRednet/angular-http-interceptor/blob/master/client/angu-http-interceptor.js) file. It only set behaviour for errorResponses of $httpProvider. 
